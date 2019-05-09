@@ -7,4 +7,13 @@ Symbol input: #
 Result: #ore python progra##ing please
 
 '''
+string = input("Type out a sentence: ")
+symbol = input("Give a symbol: ")
 
+def change(string):
+  char = string[0]
+  string = string.replace(char, symbol)
+
+  return string
+
+print(change(string))

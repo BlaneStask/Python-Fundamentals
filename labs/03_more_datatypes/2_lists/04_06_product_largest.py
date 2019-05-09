@@ -9,3 +9,15 @@ that we haven't looked at yet. See if you can figure it out, otherwise
 come back to this task after you have learned about loops)
 
 '''
+print("In this program you will enter 10 numbers.")
+
+num = 10
+list = []
+
+for i in range(1, num + 1):
+    number = int(input("Enter number: "))
+    list.append(number)
+
+print("Largest number is:", max(list))
+
+
