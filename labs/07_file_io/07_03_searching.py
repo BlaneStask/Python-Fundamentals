@@ -9,3 +9,13 @@ folder name with a bigger folder. This program should work for any specified fol
 
 
 '''
+from pathlib import Path
+
+def find_files(root, extensions):
+    ext = 0
+    for ext in extensions:
+        yield from Path(root).glob(f'**/*.{ext}')
+    return ext
+
+for file in find_files(Path.home() / 'Documents' / 'lab_folder', ['jpg']):
+    print(file)
